@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Pet Hospital | The Gold Standard of Veterinary Excellence | DHA Phase 6 Karachi</title>
+    <meta name="description" content="Best vet in Karachi DHA Phase 6. Luxury animal clinic led by pet surgery specialist Dr. Atif. Complex orthopedic & soft-tissue procedures. Book now.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            900: '#001a4d',
+                            800: '#002366',
+                            700: '#003080',
+                            600: '#003d99',
+                            500: '#004db3',
+                        },
+                        gold: {
+                            300: '#dbc68a',
+                            400: '#d4b76a',
+                            500: '#C5A059',
+                            600: '#b08d45',
+                            700: '#8a6d35',
+                        },
+                        cream: '#FAF8F5',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Gold shimmer gradient */
+        .gold-shimmer {
+            background: linear-gradient(135deg, #C5A059 0%, #dbc68a 40%, #C5A059 60%, #8a6d35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Gold border shimmer */
+        .gold-border {
+            border-image: linear-gradient(135deg, #C5A059, #dbc68a, #C5A059) 1;
+        }
+
+        /* Subtle gold line */
+        .gold-line {
+            background: linear-gradient(90deg, transparent, #C5A059, transparent);
+            height: 1px;
+        }
+
+        /* Hero background */
+        .hero-bg {
+            background: linear-gradient(165deg, #001a4d 0%, #002366 40%, #003080 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(197,160,89,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, #FAF8F5, transparent);
+            pointer-events: none;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(197,160,89,0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(197,160,89,0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes crownGlow {
+            0%, 100% { filter: drop-shadow(0 0 6px rgba(197,160,89,0.3)); }
+            50% { filter: drop-shadow(0 0 16px rgba(197,160,89,0.6)); }
+        }
+
+        .animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slide-right { animation: slideInRight 0.8s ease-out forwards; }
+        .animate-pulse-gold { animation: pulse-gold 2s infinite; }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-crown { animation: crownGlow 3s ease-in-out infinite; }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        .opacity-0-start { opacity: 0; }
+
+        /* Service card hover */
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(197,160,89,0.15);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(197,160,89,0.5);
+            box-shadow: 0 25px 60px -12px rgba(0,35,102,0.15), 0 0 40px rgba(197,160,89,0.08);
+        }
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, #C5A059, #d4b76a);
+            color: white;
+        }
+
+        /* Testimonial slider */
+        .testimonial-track {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* CTA buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #C5A059, #d4b76a);
+            color: #002366;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(197,160,89,0.4);
+        }
+
+        .btn-secondary {
+            border: 1.5px solid rgba(197,160,89,0.5);
+            color: #C5A059;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(197,160,89,0.08);
+            border-color: #C5A059;
+            transform: translateY(-2px);
+        }
+
+        .btn-royal {
+            background: linear-gradient(135deg, #002366, #003080);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-royal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,35,102,0.4);
+        }
+
+        /* Emergency button pulse */
+        .emergency-pulse {
+            animation: pulse-gold 2s infinite;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Emergency floating */
+        .emergency-float {
+            position: fixed;
+            bottom: 96px;
+            right: 24px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .emergency-float:hover {
+            transform: scale(1.05);
+        }
+
+        /* Navigation */
+        .nav-scrolled {
+            background: rgba(0, 26, 77, 0.95) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Crown icon decorative */
+        .crown-decorative {
+            color: #C5A059;
+        }
+
+        /* Map container */
+        .map-container {
+            border: 2px solid rgba(197,160,89,0.3);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        /* Stars */
+        .star { color: #C5A059; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #001a4d; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4b76a; }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Toast notification */
+        .toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-cream text-gray-800 overflow-x-hidden">
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center animate-crown">
+                    <i data-lucide="crown" class="w-5 h-5 text-royal-900"></i>
+                </div>
+                <div>
+                    <span class="font-display text-lg font-semibold text-white tracking-wide">The Royal</span>
+                    <span class="block text-[10px] uppercase tracking-[3px] text-gold-400 font-medium -mt-1">Pet Hospital</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="text-sm text-white/70 hover:text-gold-400 transition-colors duration-300 tracking-wide">Services</a>
+                <a href="#surgeon" class="text-sm text-white/70 hover:text-gold-400 transition-colors duration-300 tracking-wide">Dr. Atif</a>
+                <a href="#testimonials" class="text-sm text-white/70 hover:text-gold-400 transition-colors duration-300 tracking-wide">Reviews</a>
+                <a href="#location" class="text-sm text-white/70 hover:text-gold-400 transition-colors duration-300 tracking-wide">Location</a>
+                <a href="tel:+923113108894" class="btn-secondary px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Call Now
+                </a>
+                <a href="#book" class="btn-primary px-5 py-2.5 rounded-full text-sm font-bold tracking-wide">
+                    Book Consultation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-[60] bg-royal-900/98 backdrop-blur-xl">
+        <div class="flex flex-col h-full px-8 pt-8">
+            <div class="flex items-center justify-between mb-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+                        <i data-lucide="crown" class="w-4 h-4 text-royal-900"></i>
+                    </div>
+                    <span class="font-display text-white font-semibold">The Royal</span>
+                </div>
+                <button id="closeMenuBtn" class="text-white p-2" aria-label="Close menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6">
+                <a href="#services" class="mobile-nav-link text-2xl font-display text-white/80 hover:text-gold-400 transition-colors">Services</a>
+                <a href="#surgeon" class="mobile-nav-link text-2xl font-display text-white/80 hover:text-gold-400 transition-colors">Dr. Atif</a>
+                <a href="#testimonials" class="mobile-nav-link text-2xl font-display text-white/80 hover:text-gold-400 transition-colors">Reviews</a>
+                <a href="#location" class="mobile-nav-link text-2xl font-display text-white/80 hover:text-gold-400 transition-colors">Location</a>
+                <div class="gold-line my-4"></div>
+                <a href="tel:+923113108894" class="btn-secondary px-6 py-3 rounded-full text-base font-semibold flex items-center justify-center gap-3">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    +92 311 3108894
+                </a>
+                <a href="#book" class="btn-primary px-6 py-3 rounded-full text-base font-bold text-center mobile-nav-link">
+                    Book Consultation
+                </a>
+            </div>
+            <div class="mt-auto pb-8">
+                <p class="text-white/30 text-xs tracking-wider uppercase">The Gold Standard of Veterinary Excellence</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 pt-28 pb-32 w-full relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <!-- Badge -->
+                    <div class="opacity-0-start animate-fade-up inline-flex items-center gap-2 bg-white/5 border border-gold-500/20 rounded-full px-4 py-2 mb-8">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
+                        <span class="text-xs text-gold-400 font-medium tracking-wider uppercase">DHA Phase 6, Karachi</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="opacity-0-start animate-fade-up delay-100 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] mb-6">
+                        Your Pet Deserves a
+                        <span class="gold-shimmer">Royal Legacy.</span>
+                    </h1>
+
+                    <!-- Sub-headline -->
+                    <p class="opacity-0-start animate-fade-up delay-200 text-base sm:text-lg text-white/60 max-w-lg mb-10 leading-relaxed font-light">
+                        Experience world-class veterinary surgery and compassionate care in the heart of DHA Phase 6. Led by Dr. Atif and a team of specialists.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="opacity-0-start animate-fade-up delay-300 flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#book" class="btn-primary px-8 py-4 rounded-full text-sm font-bold tracking-wide flex items-center justify-center gap-2 animate-pulse-gold">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            Book an Elite Consultation
+                        </a>
+                        <a href="tel:+923113108894" class="btn-secondary px-8 py-4 rounded-full text-sm font-semibold flex items-center justify-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            +92 311 3108894
+                        </a>
+                    </div>
+
+                    <!-- Trust micro-indicators -->
+                    <div class="opacity-0-start animate-fade-up delay-400 flex items-center gap-6 flex-wrap">
+                        <div class="flex items-center gap-2">
+                            <div class="flex -space-x-2">
+                                <img src="https://picsum.photos/seed/petowner1/40/40.jpg" class="w-8 h-8 rounded-full border-2 border-royal-800 object-cover" alt="Pet owner">
+                                <img src="https://picsum.photos/seed/petowner2/40/40.jpg" class="w-8 h-8 rounded-full border-2 border-royal-800 object-cover" alt="Pet owner">
+                                <img src="https://picsum.photos/seed/petowner3/40/40.jpg" class="w-8 h-8 rounded-full border-2 border-royal-800 object-cover" alt="Pet owner">
+                            </div>
+                            <span class="text-white/40 text-xs font-medium">98+ Happy Families</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <div class="flex gap-0.5">
+                                <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-500 text-gold-500"></i>
+                                <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-500 text-gold-500"></i>
+                                <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-500 text-gold-500"></i>
+                                <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-500 text-gold-500"></i>
+                                <i data-lucide="star" class="w-3.5 h-3.5 fill-gold-500 text-gold-500"></i>
+                            </div>
+                            <span class="text-white/40 text-xs font-medium">4.8 on Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="hidden lg:block relative">
+                    <div class="relative animate-float">
+                        <div class="absolute -inset-8 bg-gradient-to-br from-gold-500/10 to-transparent rounded-[3rem] blur-2xl"></div>
+                        <div class="relative rounded-3xl overflow-hidden border border-gold-500/20 shadow-2xl">
+                            <img src="https://picsum.photos/seed/royalpet-hero/600/700.jpg" alt="Premium veterinary care at The Royal Pet Hospital" class="w-full h-[500px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-royal-900/80 via-transparent to-royal-900/20"></div>
+                            <!-- Overlay card -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="shield-check" class="w-6 h-6 text-royal-900"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-semibold text-sm">Complex Surgical Expertise</p>
+                                        <p class="text-white/50 text-xs mt-0.5">Orthopedic • Soft-Tissue • Emergency</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 opacity-0-start animate-fade-in delay-600">
+            <a href="#proof" class="flex flex-col items-center gap-2 text-white/30 hover:text-gold-400 transition-colors">
+                <span class="text-[10px] uppercase tracking-[3px]">Discover</span>
+                <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== SOCIAL PROOF BANNER ========== -->
+    <section id="proof" class="relative -mt-1 bg-cream">
+        <div class="max-w-5xl mx-auto px-6 py-12">
+            <div class="reveal bg-gradient-to-r from-royal-800 via-royal-700 to-royal-800 rounded-2xl p-8 md:p-10 border border-gold-500/20 relative overflow-hidden">
+                <!-- Decorative corners -->
+                <div class="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-gold-500/40 rounded-tl-2xl"></div>
+                <div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-gold-500/40 rounded-tr-2xl"></div>
+                <div class="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-gold-500/40 rounded-bl-2xl"></div>
+                <div class="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-gold-500/40 rounded-br-2xl"></div>
+
+                <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                    <!-- Rating -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-5xl font-display font-bold gold-shimmer">4.8</div>
+                        <div class="flex gap-1 mt-2">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500 text-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500 text-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500 text-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500 text-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500 text-gold-500"></i>
+                        </div>
+                        <span class="text-gold-400 text-xs mt-1 tracking-wider uppercase font-medium">Google Rating</span>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="hidden md:block w-px h-20 bg-gold-500/20"></div>
+                    <div class="md:hidden w-32 h-px bg-gold-500/20"></div>
+
+                    <!-- Reviews count -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-5xl font-display font-bold text-white">98+</div>
+                        <span class="text-white/50 text-xs mt-2 tracking-wider uppercase font-medium">Verified Reviews</span>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="hidden md:block w-px h-20 bg-gold-500/20"></div>
+                    <div class="md:hidden w-32 h-px bg-gold-500/20"></div>
+
+                    <!-- Quote -->
+                    <div class="flex-1 text-center md:text-left">
+                        <i data-lucide="quote" class="w-6 h-6 text-gold-500/40 mb-2 mx-auto md:mx-0"></i>
+                        <p class="text-white/90 font-light italic font-display text-base leading-relaxed">
+                            "Dr. Atif is a doctor you can truly trust for complex surgeries."
+                        </p>
+                        <p class="text-gold-400 text-sm font-semibold mt-2">— Hassan Suriya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="bg-cream py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section header -->
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <div class="w-8 h-px bg-gold-500"></div>
+                    <span class="text-xs uppercase tracking-[3px] text-gold-600 font-semibold">Our Specializations</span>
+                    <div class="w-8 h-px bg-gold-500"></div>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-royal-800 font-semibold leading-tight">
+                    Uncompromising Care,<br>
+                    <span class="gold-shimmer">Exceptional Outcomes</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-base font-light leading-relaxed">
+                    From intricate surgical procedures to bespoke wellness plans — every service at The Royal Pet Hospital is designed for those who accept nothing but the best for their companions.
+                </p>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Surgery -->
+                <div class="service-card reveal bg-white rounded-2xl p-8 group">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-royal-800/5 flex items-center justify-center mb-6 transition-all duration-500">
+                        <i data-lucide="syringe" class="w-7 h-7 text-royal-800 group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="font-display text-xl text-royal-800 font-semibold mb-3">Advanced Surgery</h3>
+                    <p class="text-gray-500 font-light leading-relaxed text-sm mb-6">
+                        Specialized orthopedic and soft-tissue procedures performed by Dr. Atif — the most recommended pet surgery specialist in Karachi.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Orthopedic</span>
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Soft-Tissue</span>
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Emergency</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Wellness -->
+                <div class="service-card reveal bg-white rounded-2xl p-8 group" style="transition-delay: 0.1s;">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-royal-800/5 flex items-center justify-center mb-6 transition-all duration-500">
+                        <i data-lucide="heart-pulse" class="w-7 h-7 text-royal-800 group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="font-display text-xl text-royal-800 font-semibold mb-3">Wellness & Prevention</h3>
+                    <p class="text-gray-500 font-light leading-relaxed text-sm mb-6">
+                        Tailored health plans for the discerning pet owner. Comprehensive diagnostics, vaccinations, and nutritional guidance.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Diagnostics</span>
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Vaccinations</span>
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Nutrition</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: In-Patient -->
+                <div class="service-card reveal bg-white rounded-2xl p-8 group" style="transition-delay: 0.2s;">
+                    <div class="service-icon w-14 h-14 rounded-xl bg-royal-800/5 flex items-center justify-center mb-6 transition-all duration-500">
+                        <i data-lucide="bed-double" class="w-7 h-7 text-royal-800 group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3 class="font-display text-xl text-royal-800 font-semibold mb-3">In-Patient Luxury</h3>
+                    <p class="text-gray-500 font-light leading-relaxed text-sm mb-6">
+                        24/7 monitoring in a sterile, boutique environment. Your pet receives round-the-clock attention in our premium facility.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">24/7 Care</span>
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Sterile</span>
+                        <span class="text-[11px] uppercase tracking-wider text-gold-600 bg-gold-500/10 px-3 py-1 rounded-full font-medium">Boutique</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional services row -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:border-gold-500/30 transition-all duration-300 text-center group">
+                    <i data-lucide="scan" class="w-5 h-5 text-gold-500 mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-600 font-medium">Digital X-Ray</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:border-gold-500/30 transition-all duration-300 text-center group">
+                    <i data-lucide="microscope" class="w-5 h-5 text-gold-500 mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-600 font-medium">Lab Diagnostics</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:border-gold-500/30 transition-all duration-300 text-center group">
+                    <i data-lucide="scissors" class="w-5 h-5 text-gold-500 mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-600 font-medium">Grooming</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:border-gold-500/30 transition-all duration-300 text-center group">
+                    <i data-lucide="pill" class="w-5 h-5 text-gold-500 mx-auto mb-2"></i>
+                    <p class="text-sm text-gray-600 font-medium">Pharmacy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DR. ATIF SECTION ========== -->
+    <section id="surgeon" class="bg-white py-24 md:py-32 relative overflow-hidden">
+        <!-- Subtle background pattern -->
+        <div class="absolute inset-0 opacity-[0.02]" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 0L60 30L30 60L0 30Z&quot; fill=&quot;none&quot; stroke=&quot;%23002366&quot; stroke-width=&quot;0.5&quot;/></svg>');"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="reveal relative">
+                    <div class="relative">
+                        <div class="absolute -inset-6 bg-gradient-to-br from-gold-500/10 to-royal-800/5 rounded-[2rem]"></div>
+                        <div class="relative rounded-2xl overflow-hidden border-2 border-gold-500/20">
+                            <img src="https://picsum.photos/seed/vet-doctor-portrait/600/750.jpg" alt="Dr. Atif - Chief Surgeon at The Royal Pet Hospital" class="w-full h-[450px] lg:h-[550px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-royal-900/60 via-transparent to-transparent"></div>
+                        </div>
+                        <!-- Credentials badge -->
+                        <div class="absolute -bottom-6 -right-4 lg:right-8 bg-white rounded-2xl shadow-xl p-5 border border-gold-500/20">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal-800 to-royal-700 flex items-center justify-center">
+                                    <i data-lucide="award" class="w-6 h-6 text-gold-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-royal-800 font-bold text-lg leading-tight">15+ Years</p>
+                                    <p class="text-gray-400 text-xs">Surgical Excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div>
+                    <div class="reveal">
+                        <div class="inline-flex items-center gap-2 mb-4">
+                            <div class="w-8 h-px bg-gold-500"></div>
+                            <span class="text-xs uppercase tracking-[3px] text-gold-600 font-semibold">Chief Surgeon</span>
+                        </div>
+                        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-royal-800 font-semibold leading-tight mb-6">
+                            Meet <span class="gold-shimmer">Dr. Atif</span>
+                        </h2>
+                        <p class="text-gray-500 font-light leading-relaxed mb-6">
+                            Recognized across Karachi as the <strong class="text-royal-800 font-medium">most trusted veterinary surgeon</strong> for complex procedures, Dr. Atif brings over 15 years of hands-on surgical expertise to every consultation.
+                        </p>
+                        <p class="text-gray-500 font-light leading-relaxed mb-8">
+                            His reputation isn't built on marketing — it's forged in operating rooms and validated by families who entrust their beloved companions to his care. Google reviews consistently describe him as a "genuine human being" who combines extraordinary surgical skill with heartfelt compassion.
+                        </p>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div class="reveal space-y-4 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-medium text-sm">Specialist in Complex Orthopedic & Soft-Tissue Surgeries</p>
+                                <p class="text-gray-400 text-xs mt-0.5">Procedures that other clinics refer out</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-medium text-sm">Highest-Rated Pet Surgery Specialist in Karachi</p>
+                                <p class="text-gray-400 text-xs mt-0.5">4.8 stars across 98+ verified Google reviews</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-gold-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-medium text-sm">Compassionate, Transparent Communication</p>
+                                <p class="text-gray-400 text-xs mt-0.5">"A genuine human being" — as described by pet owners</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal flex flex-col sm:flex-row gap-4">
+                        <a href="#book" class="btn-primary px-7 py-3.5 rounded-full text-sm font-bold tracking-wide flex items-center justify-center gap-2">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            Consult With Dr. Atif
+                        </a>
+                        <a href="tel:+923113108894" class="btn-royal px-7 py-3.5 rounded-full text-sm font-semibold flex items-center justify-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            Direct Line
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" class="bg-royal-900 py-24 md:py-32 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <!-- Section header -->
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <div class="w-8 h-px bg-gold-500"></div>
+                    <span class="text-xs uppercase tracking-[3px] text-gold-400 font-semibold">Testimonials</span>
+                    <div class="w-8 h-px bg-gold-500"></div>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white font-semibold leading-tight">
+                    Trusted by Families<br>
+                    <span class="gold-shimmer">Across Karachi</span>
+                </h2>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div class="reveal relative">
+                <div class="overflow-hidden rounded-2xl">
+                    <div id="testimonialTrack" class="testimonial-track flex">
+                        <!-- Testimonial 1 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white/5 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
+                                <div class="flex gap-1 mb-6">
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                </div>
+                                <p class="text-white/80 font-light leading-relaxed text-lg font-display italic mb-8">
+                                    "Dr. Atif is a doctor you can truly trust for complex surgeries. His expertise gave us hope when other clinics turned us away. Our golden retriever is walking again — something we never thought possible."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+                                        <span class="text-royal-900 font-bold text-sm">HS</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-semibold">Hassan Suriya</p>
+                                        <p class="text-white/40 text-sm">Orthopedic Surgery — Golden Retriever</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white/5 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
+                                <div class="flex gap-1 mb-6">
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                </div>
+                                <p class="text-white/80 font-light leading-relaxed text-lg font-display italic mb-8">
+                                    "I was so anxious about my cat's spaying surgery, but Dr. Atif and his team made the entire experience seamless. The facility is immaculate, and the post-op care was exceptional. She recovered so quickly!"
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+                                        <span class="text-royal-900 font-bold text-sm">AK</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-semibold">Asma Kashif</p>
+                                        <p class="text-white/40 text-sm">Spaying Surgery — Persian Cat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white/5 backdrop-blur-sm border border-gold-500/10 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
+                                <div class="flex gap-1 mb-6">
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-gold-500 text-gold-500"></i>
+                                </div>
+                                <p class="text-white/80 font-light leading-relaxed text-lg font-display italic mb-8">
+                                    "What sets Dr. Atif apart is that he's a genuine human being first, and an exceptional vet second. He took the time to explain every detail of the procedure, answered all my questions, and followed up personally. This is the best vet in Karachi."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+                                        <span class="text-royal-900 font-bold text-sm">FK</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-semibold">Farhan Khan</p>
+                                        <p class="text-white/40 text-sm">Soft-Tissue Surgery — German Shepherd</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <button id="prevBtn" class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-400 hover:bg-gold-500/10 transition-all duration-300" aria-label="Previous testimonial">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <div class="flex gap-2" id="sliderDots">
+                        <button class="slider-dot w-8 h-1.5 rounded-full bg-gold-500 transition-all duration-300" data-index="0" aria-label="Go to slide 1"></button>
+                        <button class="slider-dot w-8 h-1.5 rounded-full bg-white/20 transition-all duration-300" data-index="1" aria-label="Go to slide 2"></button>
+                        <button class="slider-dot w-8 h-1.5 rounded-full bg-white/20 transition-all duration-300" data-index="2" aria-label="Go to slide 3"></button>
+                    </div>
+                    <button id="nextBtn" class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-400 hover:bg-gold-500/10 transition-all duration-300" aria-label="Next testimonial">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOOKING SECTION ========== -->
+    <section id="book" class="bg-cream py-24 md:py-32 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="reveal bg-white rounded-3xl border border-gold-500/15 overflow-hidden shadow-xl">
+                <div class="grid lg:grid-cols-5">
+                    <!-- Left info panel -->
+                    <div class="lg:col-span-2 bg-gradient-to-br from-royal-800 to-royal-900 p-8 md:p-10 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-[60px]"></div>
+                        <div class="relative z-10">
+                            <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center mb-6">
+                                <i data-lucide="calendar-check" class="w-6 h-6 text-gold-400"></i>
+                            </div>
+                            <h3 class="font-display text-2xl text-white font-semibold mb-3">Book an Elite Consultation</h3>
+                            <p class="text-white/50 text-sm font-light leading-relaxed mb-8">
+                                Secure a dedicated appointment with Dr. Atif. We prioritize your time and your pet's well-being.
+                            </p>
+
+                            <div class="space-y-5">
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="clock" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                                    <span class="text-white/70 text-sm">Open until 10:00 PM</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="phone" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                                    <span class="text-white/70 text-sm">+92 311 3108894</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                                    <span class="text-white/70 text-sm">DHA Phase 6, Karachi</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="zap" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                                    <span class="text-white/70 text-sm">Emergency cases prioritized</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right form -->
+                    <div class="lg:col-span-3 p-8 md:p-10">
+                        <form id="bookingForm" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Your Name *</label>
+                                    <input type="text" id="ownerName" required placeholder="Full name"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/10 outline-none transition-all text-sm text-gray-800 placeholder-gray-300">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Phone *</label>
+                                    <input type="tel" id="ownerPhone" required placeholder="+92 3XX XXXXXXX"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/10 outline-none transition-all text-sm text-gray-800 placeholder-gray-300">
+                                </div>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Pet Name *</label>
+                                    <input type="text" id="petName" required placeholder="Your pet's name"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/10 outline-none transition-all text-sm text-gray-800 placeholder-gray-300">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Pet Type *</label>
+                                    <select id="petType" required
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/10 outline-none transition-all text-sm text-gray-800 appearance-none bg-white">
+                                        <option value="" disabled selected>Select</option>
+                                        <option>Dog</option>
+                                        <option>Cat</option>
+                                        <>Bird</option>
+                                        <option>Rabbit</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Service Required *</label>
+                                <select id="serviceType" required
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/10 outline-none transition-all text-sm text-gray-800 appearance-none bg-white">
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option>Surgery Consultation</option>
+                                    <option>Wellness Checkup</option>
+                                    <option>Vaccination</option>
+                                    <option>Emergency</option>
+                                    <option>Grooming</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Additional Notes</label>
+                                <textarea id="notes" rows="3" placeholder="Briefly describe your pet's condition or concern..."
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold-500 focus:ring-2 focus:ring-gold-500/10 outline-none transition-all text-sm text-gray-800 placeholder-gray-300 resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary px-8 py-4 rounded-xl text-sm font-bold tracking-wide flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                Request Appointment
+                            </button>
+                            <p class="text-center text-xs text-gray-300 mt-2">We'll confirm your appointment via WhatsApp or call within 30 minutes.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOCATION SECTION ========== -->
+    <section id="location" class="bg-white py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Info -->
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 mb-4">
+                        <div class="w-8 h-px bg-gold-500"></div>
+                        <span class="text-xs uppercase tracking-[3px] text-gold-600 font-semibold">Find Us</span>
+                        <div class="w-8 h-px bg-gold-500"></div>
+                    </div>
+                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-royal-800 font-semibold leading-tight mb-6">
+                        Visit Our<br>
+                        <span class="gold-shimmer">Premium Facility</span>
+                    </h2>
+                    <p class="text-gray-500 font-light leading-relaxed mb-10 max-w-md">
+                        Conveniently located in Ittehad Commercial Area, DHA Phase 6 — easily accessible from all parts of Karachi.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-800/5 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-royal-800"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-semibold text-sm">Address</p>
+                                <p class="text-gray-500 text-sm mt-0.5">Ittehad Commercial Area, DHA Phase 6, Karachi, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-800/5 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5 text-royal-800"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-semibold text-sm">Working Hours</p>
+                                <p class="text-gray-500 text-sm mt-0.5">Monday – Sunday: <span class="text-gold-600 font-semibold">10:00 AM – 10:00 PM</span></p>
+                                <p class="text-gray-400 text-xs mt-1">Designed for the busy professional schedule</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-royal-800/5 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-royal-800"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-semibold text-sm">Contact</p>
+                                <a href="tel:+923113108894" class="text-gold-600 hover:text-gold-700 transition-colors text-sm font-medium">+92 311 3108894</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="siren" class="w-5 h-5 text-red-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-royal-800 font-semibold text-sm">Emergency Line</p>
+                                <a href="tel:+923113108894" class="text-red-500 hover:text-red-600 transition-colors text-sm font-medium">Same number — tell us it's an emergency</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Ittehad+Commercial+Area+DHA+Phase+6+Karachi" target="_blank" rel="noopener noreferrer"
+                        class="btn-royal px-6 py-3 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                        <i data-lucide="navigation" class="w-4 h-4"></i>
+                        Get Directions
+                    </a>
+                </div>
+
+                <!-- Map -->
+                <div class="reveal">
+                    <div class="map-container shadow-xl">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.5!2d67.05!3d24.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sIttehad+Commercial+Area%2C+DHA+Phase+6%2C+Karachi!5e0!3m2!1sen!2s!4v1700000000000"
+                            width="100%" height="480" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="The Royal Pet Hospital location on map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-royal-900 pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+                            <i data-lucide="crown" class="w-5 h-5 text-royal-900"></i>
+                        </div>
+                        <div>
+                            <span class="font-display text-lg font-semibold text-white">The Royal Pet Hospital</span>
+                        </div>
+                    </div>
+                    <p class="text-white/40 text-sm font-light leading-relaxed max-w-sm mb-6">
+                        The gold standard of veterinary excellence in Karachi. Complex surgical expertise, luxury in-patient care, and compassionate wellness — all under one roof.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-white/30 uppercase tracking-wider">Best Vet in Karachi DHA Phase 6</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-[2px] text-gold-400 font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-white/40 hover:text-gold-400 text-sm transition-colors">Services</a></li>
+                        <li><a href="#surgeon" class="text-white/40 hover:text-gold-400 text-sm transition-colors">Dr. Atif</a></li>
+                        <li><a href="#testimonials" class="text-white/40 hover:text-gold-400 text-sm transition-colors">Reviews</a></li>
+                        <li><a href="#book" class="text-white/40 hover:text-gold-400 text-sm transition-colors">Book Appointment</a></li>
+                        <li><a href="#location" class="text-white/40 hover:text-gold-400 text-sm transition-colors">Location</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-[2px] text-gold-400 font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="tel:+923113108894" class="text-white/40 hover:text-gold-400 text-sm transition-colors flex items-center gap-2">
+                                <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                                +92 311 3108894
+                            </a>
+                        </li>
+                        <li>
+                            <span class="text-white/40 text-sm flex items-start gap-2">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 flex-shrink-0 mt-0.5"></i>
+                                Ittehad Commercial, DHA Phase 6
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text-white/40 text-sm flex items-center gap-2">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                                10 AM – 10 PM Daily
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="gold-line mb-6"></div>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-white/20 text-xs">© 2025 The Royal Pet Hospital. All rights reserved.</p>
+                <p class="text-white/20 text-xs">Pet surgery specialist Karachi · Luxury animal clinic Karachi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+    <a href="https://wa.me/923113108894?text=Hello%20Dr.%20Atif%2C%20I%20would%20like%20to%20inquire%20about%20your%20services%20at%20The%20Royal%20Pet%20Hospital." target="_blank" rel="noopener noreferrer"
+        class="whatsapp-float w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 transition-shadow"
+        aria-label="Chat on WhatsApp">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ========== FLOATING EMERGENCY BUTTON ========== -->
+    <a href="tel:+923113108894"
+        class="emergency-float flex items-center gap-2 bg-red-500 text-white px-5 py-3 rounded-full shadow-lg shadow-red-500/30 hover:shadow-red-500/50 emergency-pulse font-semibold text-sm"
+        aria-label="Emergency direct line">
+        <i data-lucide="siren" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">Emergency</span>
+    </a>
+
+    <!-- ========== TOAST NOTIFICATION ========== -->
+    <div id="toast" class="toast fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] bg-royal-800 text-white px-6 py-4 rounded-xl shadow-2xl border border-gold-500/20 flex items-center gap-3 max-w-md">
+        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+        </div>
+        <div>
+            <p class="font-semibold text-sm">Appointment Requested!</p>
+            <p class="text-white/60 text-xs mt-0.5">We'll confirm within 30 minutes via WhatsApp or call.</p>
+        </div>
+    </div>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // ===== NAVBAR SCROLL EFFECT =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // ===== MOBILE MENU =====
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
+        closeMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        });
+
+        // ===== SCROLL REVEAL =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== TESTIMONIAL SLIDER =====
+        const track = document.getElementById('testimonialTrack');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let autoplayInterval;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-gold-500', i === currentSlide);
+                dot.classList.toggle('bg-white/20', i !== currentSlide);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            goToSlide(currentSlide === 0 ? totalSlides - 1 : currentSlide - 1);
+            resetAutoplay();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            goToSlide(currentSlide === totalSlides - 1 ? 0 : currentSlide + 1);
+            resetAutoplay();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.dataset.index));
+                resetAutoplay();
+            });
+        });
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(() => {
+                goToSlide(currentSlide === totalSlides - 1 ? 0 : currentSlide + 1);
+            }, 5000);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+
+        startAutoplay();
+
+        // Touch/swipe support for slider
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const sliderContainer = track.parentElement;
+
+        sliderContainer.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        sliderContainer.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToSlide(currentSlide === totalSlides - 1 ? 0 : currentSlide + 1);
+                } else {
+                    goToSlide(currentSlide === 0 ? totalSlides - 1 : currentSlide - 1);
+                }
+                resetAutoplay();
+            }
+        }, { passive: true });
+
+        // ===== BOOKING FORM =====
+        const bookingForm = document.getElementById('bookingForm');
+        const toast = document.getElementById('toast');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('ownerName').value.trim();
+            const phone = document.getElementById('ownerPhone').value.trim();
+            const petName = document.getElementById('petName').value.trim();
+            const petType = document.getElementById('petType').value;
+            const service = document.getElementById('serviceType').value;
+            const notes = document.getElementById('notes').value.trim();
+
+            if (!name || !phone || !petName || !petType || !service) return;
+
+            // Show success toast
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 5000);
+
+            // Also open WhatsApp with pre-filled message
+            const message = `Hello Dr. Atif, I'd like to book an appointment.\n\n📋 *Owner:* ${name}\n📞 *Phone:* ${phone}\n🐾 *Pet:* ${petName} (${petType})\n🏥 *Service:* ${service}${notes ? '\n📝 *Notes:* ' + notes : ''}`;
+            const waUrl = `https://wa.me/923113108894?text=${encodeURIComponent(message)}`;
+
+            // Open WhatsApp after a brief delay
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 800);
+
+            bookingForm.reset();
+        });
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ===== COUNTER ANIMATION (for proof section) =====
+        let counterAnimated = false;
+        const proofSection = document.getElementById('proof');
+
+        function animateCounters() {
+            if (counterAnimated) return;
+            counterAnimated = true;
+            // Simple visual feedback - the numbers are already static but we could animate them
+            // For now, the reveal animation handles the visual entrance
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) animateCounters();
+            });
+        }, { threshold: 0.5 });
+
+        if (proofSection) counterObserver.observe(proofSection);
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "The Royal Pet Hospital",
+        "description": "The gold standard of veterinary excellence in Karachi. Complex surgical expertise led by Dr. Atif. Best vet in Karachi DHA Phase 6.",
+        "url": "https://theroyalpethospital.com",
+        "telephone": "+923113108894",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ittehad Commercial Area",
+            "addressLocality": "DHA Phase 6",
+            "addressRegion": "Karachi",
+            "addressCountry": "PK"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "24.8",
+            "longitude": "67.05"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "10:00",
+            "closes": "22:00"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "98"
+        },
+        "priceRange": "$$",
+        "image": "https://picsum.photos/seed/royalpet-hero/600/700.jpg",
+        "medicalSpecialty": ["Orthopedic Surgery","Soft-Tissue Surgery","Veterinary Emergency Medicine"]
+    }
+    </script>
+</body>
+</html>
